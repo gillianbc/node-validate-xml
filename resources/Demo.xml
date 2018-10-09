@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Demo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Demo.xsd">
+	
+	<IdExt>1817</IdExt>
+	<FullOrPartTime>full</FullOrPartTime>
+	<Unemployed>Y</Unemployed>
+	<UnemployedReason>LAZY</UnemployedReason>
+	<SubjectId>171267</SubjectId>
+	<SubjectType>PERSON</SubjectType>
+	<StartDate>1957-08-13</StartDate>
+	<EndDate>1957-08-13</EndDate>
+	<EndReason>REAS</EndReason>
+	<StartedByPersonId>1726</StartedByPersonId>
+</Demo>

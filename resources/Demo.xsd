@@ -1,0 +1,46 @@
+<!-- edited with XMLSpy v2014 sp1 (http://www.altova.com) by Gillian Bladen-Clark (Northgate Public Services) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1.0" id="ManagedClassificationAssignment">
+	<xsd:annotation>
+		<xsd:documentation>
+      Defines a Classification Assignment for a person.
+    </xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="common.xsd"/>
+	<xsd:simpleType name="SubjectType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="PERSON"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="Demo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Id" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>EMPLOYMENT_RECORDS.IDENTIFIER</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="IdExt" type="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>EMPLOYMENT_RECORDS.IDENTIFIER - extended</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="FullOrPartTime" type="EmploymentHours"/>
+				<xsd:element name="Unemployed" type="YesNoUnknown"/>
+				<xsd:element name="UnemployedReason" type="Code" minOccurs="0"/>
+				<xsd:element name="SubjectId" type="xsd:string"/>
+				<xsd:element name="SubjectType" type="SubjectType"/>
+				<xsd:element name="StartDate" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="EndDate" type="xsd:date" minOccurs="0"/>
+				<xsd:element name="EndReason" type="Code" minOccurs="0"/>
+				<xsd:element name="StartedByPersonId" type="xsd:integer" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="EmploymentHours">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="full"/>
+			<xsd:enumeration value="part"/>
+			<xsd:enumeration value="unknown"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

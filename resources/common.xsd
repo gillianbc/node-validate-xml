@@ -1,0 +1,15 @@
+<!-- edited with XMLSpy v2014 sp1 (http://www.altova.com) by Gillian Bladen-Clark (Northgate Public Services) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1.0">
+	<xsd:simpleType name="YesNoUnknown">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="U"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="Code">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
